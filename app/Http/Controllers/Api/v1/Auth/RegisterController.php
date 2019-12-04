@@ -3,45 +3,33 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Services\Api\v1\Auth\ClientRegistrationService;
+use App\Http\Requests\Api\v1\Auth\UserRegistrationRequest;
 
 class RegisterController extends Controller
 {
-    public function register(Request $request)
+    /**
+     * @var ClientRegistrationService
+     */
+    protected $service;
+
+    /**
+     * RegisterController constructor.
+     * @param ClientRegistrationService $service
+     */
+    public function __construct(ClientRegistrationService $service)
     {
-        $user = Client::create([
-            'email'    => $request->email,
-            'password' => $request->password,
-        ]);
+        $this->middleware('guest:api');
 
-        $token = auth()->login($user);
-
-        return $this->respondWithToken($token);
+        $this->service = $service;
     }
 
-    public function login()
+    /**
+     * @param UserRegistrationRequest $request
+     * @return \App\Http\Resources\Clients\ClientPrivateResource
+     */
+    public function __invoke(UserRegistrationRequest $request)
     {
-        $credentials = request(['email', 'password']);
-
-        if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        return $this->respondWithToken($token);
-    }
-
-    public function logout()
-    {
-        auth()->logout();
-
-        return response()->json(['message' => 'Successfully logged out']);
-    }
-
-    protected function respondWithToken($token)
-    {
-        return response()->json([
-            'access_token' => $token,
-            'token_type'   => 'bearer',
-            'expires_in'   => auth()->factory()->getTTL() * 60
-        ]);
+        return $this->service->handle($request->validated());
     }
 }

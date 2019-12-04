@@ -5,7 +5,7 @@ namespace App\Services\Api\v1\Auth;
 use App\Http\Resources\Clients\ClientPrivateResource;
 use App\Services\Api\v1\ApiResponse;
 
-class LoginService extends ApiResponse
+class ClientLoginService extends ApiResponse
 {
     /**
      * @param array $request
