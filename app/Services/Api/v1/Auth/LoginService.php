@@ -7,6 +7,10 @@ use App\Services\Api\v1\ApiResponse;
 
 class LoginService extends ApiResponse
 {
+    /**
+     * @param array $request
+     * @return ClientPrivateResource|\Illuminate\Http\JsonResponse
+     */
     public function handle(array $request)
     {
         if (! $token = $this->clientExists($request)) {
@@ -17,17 +21,29 @@ class LoginService extends ApiResponse
             ]);
         }
 
-        return (new ClientPrivateResource(auth()->user()))
-            ->additional([
-                'meta' => [
-                    'token' => $token,
-                ]
-            ]);
+        return $this->handleClientWithToken($token);
     }
 
 
+    /**
+     * @param $request
+     * @return mixed
+     */
     protected function clientExists($request)
     {
         return auth()->guard('api')->attempt($request);
+    }
+
+    /**
+     * @param $token
+     * @return ClientPrivateResource
+     */
+    protected function handleClientWithToken($token)
+    {
+        return (new ClientPrivateResource(auth()->user()))->additional([
+            'meta' => [
+                'token' => $token,
+            ]
+        ]);
     }
 }
