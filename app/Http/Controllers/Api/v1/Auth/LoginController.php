@@ -33,12 +33,11 @@ class LoginController extends Controller
         return $this->loginService->handle($request->validated());
     }
 
+    /**
+     * @return mixed
+     */
     public function logout()
     {
-        dd(auth()->guard('api')->user());
-
-        auth()->guard('api')->logout();
-
-        return response()->json(['message' => 'Successfully logged out']);
+       return auth()->guard('api')->logout();
     }
 }
