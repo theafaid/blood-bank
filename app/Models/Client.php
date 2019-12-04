@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -9,7 +10,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class Client extends Authenticatable implements JWTSubject
 {
-    use Notifiable;
+    use Notifiable, HasPassword;
 
     /**
      * The attributes that are mass assignable.
@@ -35,6 +36,7 @@ class Client extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.

@@ -27,6 +27,6 @@ class ClientRepository implements ClientRepositoryInterface
      */
     public function store($data)
     {
-        return $this->clients->store($data);
+        return $this->clients->create($data);
     }
 }
