@@ -43,7 +43,7 @@ class Client extends Authenticatable implements JWTSubject
      */
     public function getJWTIdentifier()
     {
-        return "id";
+        return $this->id;
     }
 
     /**
@@ -54,5 +54,21 @@ class Client extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function bloodType()
+    {
+        return $this->belongsTo(BloodType::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function city()
+    {
+        return $this->belongsTo(City::class);
     }
 }

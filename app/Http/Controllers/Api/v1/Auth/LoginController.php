@@ -19,6 +19,8 @@ class LoginController extends Controller
      */
     public function __construct(LoginService $loginService)
     {
+        $this->middleware('guest:api', ['except' => ['logout']]);
+
         $this->loginService = $loginService;
     }
 
@@ -33,7 +35,9 @@ class LoginController extends Controller
 
     public function logout()
     {
-        auth()->logout();
+        dd(auth()->guard('api')->user());
+
+        auth()->guard('api')->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
     }

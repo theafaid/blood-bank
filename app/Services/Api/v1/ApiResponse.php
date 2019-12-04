@@ -69,18 +69,4 @@ class ApiResponse
     {
         return $this->setStatusCode(500)->respondWithError($message);
     }
-
-    /**
-     * @param $token
-     * @param array $data
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function respondWithToken($token, $data = [])
-    {
-        return $this->respond(array_merge($data, [
-            'access_token' => $token,
-            'token_type'   => 'bearer',
-            'expires_in'   => auth()->factory()->getTTL() * 60
-        ]));
-    }
 }
