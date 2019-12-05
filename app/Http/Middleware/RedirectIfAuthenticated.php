@@ -20,6 +20,8 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check()) {
             if(! $request->expectsJson()) {
                 return redirect('/home');
+            } else {
+                return abort(403);
             }
         }
 

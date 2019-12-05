@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Auth Routes
  */
@@ -10,6 +9,11 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'auth'], function () {
     Route::post('/register', 'RegisterController');
     Route::post('/login', 'LoginController@login');
     Route::post('/logout', 'LoginController@logout');
+    Route::group(['prefix' => 'password'], function () {
+        Route::post('create', 'PasswordResetController@create');
+        Route::get('find/{token}', 'PasswordResetController@find');
+        Route::post('reset', 'PasswordResetController@reset');
+    });
 });
 
 /**
@@ -27,3 +31,31 @@ Route::group(['prefix' => 'governorates', 'namespace' => 'Governorates'], functi
 Route::group(['prefix' => 'blood-types', 'namespace' => 'BloodTypes'], function () {
     Route::get('/', 'BloodTypeController');
 });
+
+
+/**
+ * Site settings
+ */
+Route::group(['prefix' => 'site-settings', 'namespace' => 'SiteSettings'], function () {
+    Route::get('/', 'SiteSettingController');
+});
+
+
+/**
+ * Contacts
+ */
+Route::group(['prefix' => 'contacts'], function () {
+    Route::post('/', 'Contacts\ContactController');
+});
+
+
+/**
+ * Categories & Posts
+ */
+
+Route::group(['prefix' => 'categories'], function() {
+    Route::get('/', 'Categories\CategoryController');
+    Route::get('/{category}/posts', 'Categories\CategoryPostsController@index');
+    Route::get('/{category}/posts/{post}', 'Categories\CategoryPostsController@show');
+});
+

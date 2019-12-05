@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c91fa457-da5b-4988-bdc1-3cf8c8e1290e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/Auth/PasswordResetController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Governorate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Governorate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/HasPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,23 +132,24 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories/Eloquent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories/Contracts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laraapp\app\Notifications\Auth" />
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Governorates" />
       <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1" />
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Auth" />
       <recent name="C:\xampp\htdocs\laraapp\app\Models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Eloquent" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Contracts" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Governorates" />
       <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\Auth" />
+      <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Eloquent" />
+      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Governorates" />
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Auth" />
     </key>
   </component>
