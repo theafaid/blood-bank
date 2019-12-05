@@ -17,7 +17,7 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'auth'], function () {
 });
 
 /**
- * Governorates & Cities
+ * Governorates & Governorate Cities
  */
 
 Route::group(['prefix' => 'governorates', 'namespace' => 'Governorates'], function () {
@@ -44,18 +44,35 @@ Route::group(['prefix' => 'site-settings', 'namespace' => 'SiteSettings'], funct
 /**
  * Contacts
  */
-Route::group(['prefix' => 'contacts'], function () {
-    Route::post('/', 'Contacts\ContactController');
+Route::group(['prefix' => 'contacts', 'namespace' => 'Contacts'], function () {
+    Route::post('/', 'ContactController');
 });
 
 
 /**
- * Categories & Posts
+ * Categories & Category Posts
  */
 
-Route::group(['prefix' => 'categories'], function() {
-    Route::get('/', 'Categories\CategoryController');
-    Route::get('/{category}/posts', 'Categories\CategoryPostsController@index');
-    Route::get('/{category}/posts/{post}', 'Categories\CategoryPostsController@show');
+Route::group(['prefix' => 'categories', 'namespace' => 'Categories'], function() {
+    Route::get('/', 'CategoryController');
+    Route::get('/{category}/posts', 'CategoryPostsController@index');
+    Route::get('/{category}/posts/{post}', 'CategoryPostsController@show');
 });
 
+/**
+ * Posts & Post favourites
+ */
+Route::group(['prefix' => 'posts', 'namespace' => 'Posts'], function() {
+    Route::get('/', 'PostController');
+    Route::post('/{post}/favourites', 'PostFavouritesController');
+});
+
+
+/**
+ * User
+ */
+Route::group(['prefix' => 'user', 'namespace' => 'User'], function () {
+    Route::get('/favourited-posts', 'UserFavouritedPostsController');
+    Route::get('/profile', 'UserProfileController@show');
+    Route::patch('/profile', 'UserProfileController@update');
+});

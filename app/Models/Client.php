@@ -81,4 +81,20 @@ class Client extends Authenticatable implements JWTSubject
     {
         return $this->morphedByMany(Post::class, 'clientable');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function openedBloodTypesForNotification()
+    {
+        return $this->morphedByMany(BloodType::class, 'clientable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function openedGovernoratesForNotification()
+    {
+        return $this->morphedByMany(Governorate::class, 'clientable');
+    }
 }

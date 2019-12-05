@@ -58,7 +58,7 @@ class ClientResetPasswordService extends ApiResponse
     {
         $client = $this->getClientByEmail($request['email']);
 
-        $client->update(['password' => $request['password']]);
+        $client->update(['password' => bcrypt($request['password'])]);
 
         return $this->handleRequestAfterReset($client);
     }

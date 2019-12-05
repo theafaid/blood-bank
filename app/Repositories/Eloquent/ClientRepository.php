@@ -29,4 +29,18 @@ class ClientRepository implements ClientRepositoryInterface
     {
         return $this->clients->create($data);
     }
+
+    /**
+     * @param $client
+     * @param $data
+     * @return mixed
+     */
+    public function update($client, $data)
+    {
+        if(isset($data['password'])) {
+            $data['password'] = bcrypt($data['password']);
+        }
+
+        return $client->update($data);
+    }
 }

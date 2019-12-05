@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
+use App\Traits\Favouritable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
     protected $guarded = [];
 
-    public function favouritedClients()
-    {
-        return $this->morphToMany(Client::class, 'clientable');
-    }
+    use Favouritable;
 }

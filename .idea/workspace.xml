@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c91fa457-da5b-4988-bdc1-3cf8c8e1290e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/v1/Auth/UserRegistrationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/v1/Auth/UserRegistrationRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/ClientRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/ClientRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Api/v1/Auth/ClientResetPasswordService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Api/v1/Auth/ClientResetPasswordService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/HasPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,10 +145,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Contracts" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\Auth" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Eloquent" />
+      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Posts" />
+      <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\Auth" />
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Governorates" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Auth" />
     </key>
   </component>
   <component name="RunDashboard">
