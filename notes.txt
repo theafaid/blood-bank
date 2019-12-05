@@ -11,3 +11,5 @@
 
    now what if any patient add an order [my blood type is A+ and The location is in Cairo] // 2(notifications for client)
    how can we handle this ?
+
+5- To create Donation request, is it required to be authenticated ?? and if yes, will we add client_id to fetch his own donation requests ?

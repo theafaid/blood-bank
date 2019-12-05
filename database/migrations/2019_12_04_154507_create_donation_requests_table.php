@@ -24,7 +24,7 @@ class CreateDonationRequestsTable extends Migration
             $table->decimal('lng', 9,6);
             $table->unsignedMediumInteger('city_id');
             $table->string('phone_number');
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }

@@ -35,6 +35,6 @@ class ValidLocationCoordinates implements Rule
      */
     public function message()
     {
-        return 'The validation error message.';
+        return 'عنوان غير صالح';
     }
 }

@@ -27,11 +27,13 @@ class DonationRequestStoreRequest extends BaseFormRequest
         return [
             'patient_name' => 'required|string|max:55',
             'patient_age' => 'required|string|min:2|max:2',
-            'blood_type_id' => 'required|numeric|exists|blood_types,id',
+            'blood_type_id' => 'required|numeric|exists:blood_types,id',
             'bags_count' => 'required|numeric|max:99',
             'hospital_name' => 'required|string|max:55',
-            'location' => ['required', new ValidLocationCoordinates()],
-            'phone_number' => 'required|string'
+            'location' => ['required', new ValidLocationCoordinates],
+            'phone_number' => 'required|string',
+            'city_id' => 'required|numeric|exists:cities,id',
+            'note' => 'nullable|string|max:5000',
         ];
     }
 }
