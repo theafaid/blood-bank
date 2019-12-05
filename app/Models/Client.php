@@ -73,4 +73,12 @@ class Client extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo(City::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function favouritedPosts()
+    {
+        return $this->morphedByMany(Post::class, 'clientable');
+    }
 }
