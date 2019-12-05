@@ -84,5 +84,7 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function () {
  * Donation Requests
  */
 Route::group(['prefix' => 'donation-requests', 'namespace' => 'DonationRequests'], function () {
+    Route::get('/', 'DonationRequestController@index');
     Route::post('/', 'DonationRequestController@store');
+    Route::get('/{donationRequest}', 'DonationRequestController@show');
 });

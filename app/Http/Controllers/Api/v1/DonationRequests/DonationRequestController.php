@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api\v1\DonationRequests;
 
+use App\Models\DonationRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\DonationRequests\DonationRequestResource;
 use App\Services\Api\v1\DonationRequests\DonationRequestStoreService;
+use App\Services\Api\v1\DonationRequests\DonationRequestIndexService;
 use App\Http\Requests\Api\v1\DonationRequests\DonationRequestStoreRequest;
 
 class DonationRequestController extends Controller
@@ -18,6 +20,15 @@ class DonationRequestController extends Controller
     }
 
     /**
+     * @return mixed
+     */
+    public function index()
+    {
+        return resolve(DonationRequestIndexService::class)
+            ->handle(request());
+    }
+
+    /**
      * @param DonationRequestStoreRequest $request
      * @return DonationRequestResource
      */
@@ -27,5 +38,14 @@ class DonationRequestController extends Controller
             resolve(DonationRequestStoreService::class)
                 ->handle($request->validated())
         );
+    }
+
+    /**
+     * @param DonationRequest $donationRequest
+     * @return DonationRequestResource
+     */
+    public function show(DonationRequest $donationRequest)
+    {
+        return new DonationRequestResource($donationRequest);
     }
 }

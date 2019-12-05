@@ -4,13 +4,10 @@
     <list default="true" id="c91fa457-da5b-4988-bdc1-3cf8c8e1290e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/DonationRequests/DonationRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/DonationRequests/DonationRequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/v1/DonationRequests/DonationRequestStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/v1/DonationRequests/DonationRequestStoreRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/DonationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DonationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/ValidLocationCoordinates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/ValidLocationCoordinates.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_04_154507_create_donation_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_04_154507_create_donation_requests_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Contracts/DonationRequestRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Contracts/DonationRequestRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/DonationRequestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/DonationRequestRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,18 +126,18 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories/Contracts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Scoping/Scopes" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laraapp\app\Scoping\Scopes" />
+      <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\DonationRequests" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Contracts" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Eloquent" />
       <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\User" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Posts" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\Auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laraapp\app\Models" />
