@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c91fa457-da5b-4988-bdc1-3cf8c8e1290e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BloodType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BloodType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +123,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories/Contracts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Api/v1/User" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -136,11 +137,11 @@
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Auth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\User" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Contracts" />
       <recent name="C:\xampp\htdocs\laraapp\app\Repositories\Eloquent" />
       <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Posts" />
       <recent name="C:\xampp\htdocs\laraapp\app\Services\Api\v1\Auth" />
-      <recent name="C:\xampp\htdocs\laraapp\app\Http\Controllers\Api\v1\Governorates" />
     </key>
   </component>
   <component name="RunDashboard">

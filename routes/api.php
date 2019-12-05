@@ -75,4 +75,6 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function () {
     Route::get('/favourited-posts', 'UserFavouritedPostsController');
     Route::get('/profile', 'UserProfileController@show');
     Route::patch('/profile', 'UserProfileController@update');
+    Route::get('/allowed-notifications', 'UserNotificationsSettingController@index');
+    Route::patch('/allowed-notifications', 'UserNotificationsSettingController@update');
 });
