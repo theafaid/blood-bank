@@ -44,8 +44,8 @@ class PasswordResetRequest extends Notification
     {
         $url = apiUrl('auth/password/find/' . $this->token);
         return (new MailMessage)
-            ->line('You are receiving this email because we received a password reset request for your account.')
-            ->action('Reset Password', url($url))
-            ->line('If you did not request a password reset, no further action is required.');
+            ->line('لقد طلبت تغيير كلمة مرور حسابك. اضغط على الرابط لاعادة تعيينها مرة اخرى')
+            ->action('إعادة تعيين كلمة السر الخاصة بى', url($url))
+            ->line('اذا حصلت على هذه الرسالة بالخطأ برجاء تجاهلها!');
     }
 }

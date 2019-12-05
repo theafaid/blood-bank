@@ -1,0 +1,13 @@
+1- What is nofitication_message in settings table
+
+2- location consists of lat, long >>
+    - why to provide a city_id also ??
+    - how to get the city_id ? is it front end job or ?
+
+
+3- What types of notifications that patient receive and what type of notifications that clients || donations receive ??
+
+4- What if any client has set A+ for receiving notifications and cairo for receiving notifications
+
+   now what if any patient add an order [my blood type is A+ and The location is in Cairo] // 2(notifications for client)
+   how can we handle this ?

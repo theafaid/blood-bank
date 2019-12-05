@@ -78,3 +78,11 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function () {
     Route::get('/allowed-notifications', 'UserNotificationsSettingController@index');
     Route::patch('/allowed-notifications', 'UserNotificationsSettingController@update');
 });
+
+
+/**
+ * Donation Requests
+ */
+Route::group(['prefix' => 'donation-requests', 'namespace' => 'DonationRequests'], function () {
+    Route::post('/', 'DonationRequestController@store');
+});
