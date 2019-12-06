@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api\v1\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Services\Api\v1\Auth\ClientLoginService;
-use App\Services\Api\v1\Auth\LoginService;
 use App\Http\Requests\Api\v1\Auth\UserLoginRequest;
 
 class LoginController extends Controller
@@ -39,6 +38,8 @@ class LoginController extends Controller
      */
     public function logout()
     {
-       return auth()->guard('api')->logout();
+        auth()->guard('api')->logout();
+
+        return response(['message' => 'تم تسجيل خروجك بنجاح']);
     }
 }

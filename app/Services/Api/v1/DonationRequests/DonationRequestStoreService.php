@@ -28,7 +28,11 @@ class DonationRequestStoreService
     {
         $request = $this->handleRequestWithLocation($request);
 
-        return $this->donationRequests->store($request);
+        $donationRequest = $this->donationRequests->store($request);
+
+        // notify clients who following $donationRequest->bloodType && $donationRequest->governorate
+
+        return $donationRequest;
     }
 
     /**

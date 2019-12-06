@@ -16,7 +16,7 @@ class SiteSettingResource extends JsonResource
     {
         return [
             'mobile_store_urls' => $this->mobile_store_urls,
-            'notification_text' => $this->notification_text,
+            'notification_text' => $this->welcome_page_text,
             'about' => $this->about,
             'phone_number' => $this->phone_number,
             'email' => $this->email,

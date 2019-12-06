@@ -108,10 +108,9 @@ class ClientResetPasswordService extends ApiResponse
      */
     protected function createPasswordResetRecord($client)
     {
-        return PasswordReset::updateOrCreate(
-            ['email' => $client->email],
-            ['email' => $client->email, 'token' => Str::random(60)]
-        );
+        return PasswordReset::create([
+            'email' => $client->email, 'token' => Str::random(60)
+            ]);
     }
 
     /**

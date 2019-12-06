@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Posts;
 
+use App\Http\Resources\Categories\CategoryResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PostResource extends JsonResource
@@ -19,6 +20,7 @@ class PostResource extends JsonResource
             'title' => $this->title,
             'body' => $this->body,
             'thumbnail' => $this->thumbnail,
+            'category' => new CategoryResource($this->whenLoaded('category')),
             'created_at' => $this->created_at->diffForHumans(),
         ];
     }

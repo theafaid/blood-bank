@@ -13,3 +13,7 @@
    how can we handle this ?
 
 5- To create Donation request, is it required to be authenticated ?? and if yes, will we add client_id to fetch his own donation requests ?
+
+6- How can we handle phones (+20) and so on.
+
+7- Contacts require to be authenticated ?
