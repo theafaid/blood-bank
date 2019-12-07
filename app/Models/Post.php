@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use Favouritable;
+
     /**
      * @var array
      */
@@ -16,8 +18,6 @@ class Post extends Model
      * @var array
      */
     protected $with = ['category'];
-
-    use Favouritable;
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

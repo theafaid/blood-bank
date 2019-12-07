@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use App\Scoping\Scoper;
-use Illuminate\Database\Eloquent\Builder;
+use App\Traits\HasScope;
 use Illuminate\Database\Eloquent\Model;
 
 class DonationRequest extends Model
 {
+    use HasScope;
     /**
      * @var array
      */
@@ -19,11 +19,6 @@ class DonationRequest extends Model
     public function location()
     {
         return "{$this->lat},{$this->lng}";
-    }
-
-    public function scopeWithScopes(Builder $builder, $scopes = [])
-    {
-        return (new Scoper(request()))->apply($builder, $scopes);
     }
 
     /**

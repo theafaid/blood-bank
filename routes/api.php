@@ -25,29 +25,23 @@ Route::group(['prefix' => 'governorates', 'namespace' => 'Governorates'], functi
     Route::get('/{governorate}/cities', 'GovernorateCitiesController@index');
 });
 
+/** Cities */
+Route::get('/cities', 'Cities\CityController');
+
 /**
  * Blood types
  */
-Route::group(['prefix' => 'blood-types', 'namespace' => 'BloodTypes'], function () {
-    Route::get('/', 'BloodTypeController');
-});
-
+Route::get('/blood-types', 'BloodTypes\BloodTypeController');
 
 /**
  * Site settings
  */
-Route::group(['prefix' => 'site-settings', 'namespace' => 'SiteSettings'], function () {
-    Route::get('/', 'SiteSettingController');
-});
-
+Route::get('/site-settings', 'SiteSettings\SiteSettingController');
 
 /**
  * Contacts
  */
-Route::group(['prefix' => 'contacts', 'namespace' => 'Contacts'], function () {
-    Route::post('/', 'ContactController');
-});
-
+Route::post('/contacts', 'Contacts\ContactController');
 
 /**
  * Categories & Category Posts

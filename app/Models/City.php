@@ -2,23 +2,17 @@
 
 namespace App\Models;
 
+use App\Traits\HasScope;
 use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
+    use HasScope;
+
     /**
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * @param $governorate
-     * @return mixed
-     */
-    public function in($governorate)
-    {
-        return $this->where('governorate_id', $governorate->id);
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
