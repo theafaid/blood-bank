@@ -24,9 +24,9 @@ class UserNotificationSettingUpdateRequest extends BaseFormRequest
     public function rules()
     {
         return [
-            'blood_types' => 'present|array',
+            'blood_types' => 'present|array|required_with:governorates',
             'blood_types.*' => 'numeric|exists:blood_types,id',
-            'governorates' => 'present|array',
+            'governorates' => 'present|array|required_with:blood_types',
             'governorates.*' => 'numeric|exists:governorates,id',
         ];
     }

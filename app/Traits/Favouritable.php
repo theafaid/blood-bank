@@ -17,7 +17,7 @@ trait Favouritable
 
     /**
      * @param $client
-     */
+*/
     public function favourite($client)
     {
         $this->favouritedClients()->attach([

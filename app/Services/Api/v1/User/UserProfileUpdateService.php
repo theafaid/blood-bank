@@ -2,10 +2,10 @@
 
 namespace App\Services\Api\v1\User;
 
+use App\Http\Resources\Clients\ClientPrivateResource;
 use App\Repositories\Contracts\ClientRepositoryInterface;
-use App\Services\Api\v1\ApiResponse;
 
-class UserProfileUpdateService extends ApiResponse
+class UserProfileUpdateService
 {
     /**
      * @var ClientRepositoryInterface
@@ -24,7 +24,7 @@ class UserProfileUpdateService extends ApiResponse
     /**
      * @param $request
      * @param null $client
-     * @return \Illuminate\Http\JsonResponse
+     * @return ClientPrivateResource
      */
     public function handle($request, $client = null)
     {
@@ -32,6 +32,8 @@ class UserProfileUpdateService extends ApiResponse
 
         $this->clients->update($client, $request);
 
-        return $this->respond('تم تعديل بياناتك بنجاح');
+        return (new ClientPrivateResource($client->fresh()))->additional([
+            'message' => 'تم تعديل بياناتك بنجاح',
+        ]);
     }
 }

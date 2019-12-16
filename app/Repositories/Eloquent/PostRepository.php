@@ -22,12 +22,13 @@ class PostRepository implements PostRepositoryInterface
     }
 
     /**
-     * @param int $limit
+     * @param $name
+     * @param $arguments
      * @return mixed
      */
-    public function paginated($limit = 15)
+    public function __call($name, $arguments)
     {
-        return $this->posts->latest()->paginate($limit);
+        return $this->posts->{$name}($arguments[0]);
     }
 
     /**

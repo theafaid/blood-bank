@@ -2,17 +2,12 @@
 
 namespace App\Models;
 
+use App\Traits\HasNotifiedClients;
 use Illuminate\Database\Eloquent\Model;
 
 class BloodType extends Model
 {
-    protected $guarded = [];
+    use HasNotifiedClients;
 
-    /**
-     * @return mixed
-     */
-    public function notifiedClients()
-    {
-        return $this->morphToMany(Client::class, 'clientable');
-    }
+    protected $guarded = [];
 }

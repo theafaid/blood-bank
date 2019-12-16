@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api\v1\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Api\v1\User\UserProfileUpdateRequest;
 use App\Http\Resources\Clients\ClientPrivateResource;
 use App\Services\Api\v1\User\UserProfileUpdateService;
+use App\Http\Requests\Api\v1\User\UserProfileUpdateRequest;
 
 class UserProfileController extends Controller
 {

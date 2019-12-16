@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use App\Traits\Favouritable;
+use App\Traits\HasScope;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use Favouritable;
+    use Favouritable, HasScope;
 
     /**
      * @var array

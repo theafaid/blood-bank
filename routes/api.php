@@ -47,7 +47,7 @@ Route::post('/contacts', 'Contacts\ContactController');
  * Categories & Category Posts
  */
 
-Route::group(['prefix' => 'governorates', 'namespace' => 'Categories'], function() {
+Route::group(['prefix' => 'categories', 'namespace' => 'Categories'], function() {
     Route::get('/', 'CategoryController');
     Route::get('/{category}/posts', 'CategoryPostsController@index');
     Route::get('/{category}/posts/{post}', 'CategoryPostsController@show');
