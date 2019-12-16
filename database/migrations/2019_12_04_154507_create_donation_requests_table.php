@@ -15,6 +15,7 @@ class CreateDonationRequestsTable extends Migration
     {
         Schema::create('donation_requests', function (Blueprint $table) {
             $table->mediumIncrements('id');
+            $table->unsignedBigInteger('client_id');
             $table->string('patient_name', 55);
             $table->string('patient_age', 2);
             $table->unsignedTinyInteger('blood_type_id');
@@ -26,6 +27,11 @@ class CreateDonationRequestsTable extends Migration
             $table->string('phone_number');
             $table->text('note')->nullable();
             $table->timestamps();
+
+            $table->foreign('client_id')
+                ->references('id')
+                ->on('clients')
+                ->onDelete('cascade');
         });
     }
 

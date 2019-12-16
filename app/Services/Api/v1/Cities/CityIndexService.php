@@ -21,7 +21,7 @@ class CityIndexService
     protected function scopes()
     {
         return [
-            'governorate' => new GovernorateScope,
+            'governorate_id' => new GovernorateScope,
         ];
     }
 }

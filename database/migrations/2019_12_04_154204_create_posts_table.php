@@ -23,7 +23,7 @@ class CreatePostsTable extends Migration
 
             $table->foreign('category_id')
                 ->references('id')
-                ->on('categories')
+                ->on('governorates')
                 ->onDelete('cascade');
         });
     }

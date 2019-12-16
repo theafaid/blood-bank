@@ -19,4 +19,4 @@ class CityScope implements Scope
         });
     }
 }
-
+    

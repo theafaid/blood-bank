@@ -17,5 +17,5 @@
 6- How can we handle phones (+20) and so on.
 
 7- Contacts require to be authenticated ?
-d
+
 

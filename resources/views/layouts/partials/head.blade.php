@@ -16,7 +16,8 @@
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
     <title>{{config('app.name')}} - @yield('title')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <<link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+
     <!-- Dashboard Core -->
     <link href="/css/dashboard.rtl.css" rel="stylesheet" />
 
