@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c91fa457-da5b-4988-bdc1-3cf8c8e1290e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Governorates.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/Posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/Posts/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/User/UserProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/User/UserProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/v1/User/UserNotificationSettingUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/v1/User/UserNotificationSettingUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BloodType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BloodType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Governorate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Governorate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Contracts/PostRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Contracts/PostRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Api/v1/Posts/PostFavouritesHandlerService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Api/v1/Posts/PostFavouritesHandlerService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Api/v1/User/UserProfileUpdateService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Api/v1/User/UserProfileUpdateService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/Favouritable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Favouritable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Governorates/GovernorateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Governorates/GovernorateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Contracts/GovernorateRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Contracts/GovernorateRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/GovernorateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/GovernorateRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_04_153606_create_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_04_153606_create_clients_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/components/auth.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/components/auth.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/governorates/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/governorates/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/scripts.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,17 +200,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2685" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1576524533460">
+    <state x="2685" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1576532116894">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2685" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576524533460" />
+    <state x="2685" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576532116894" />
     <state x="2610" y="281" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576526136980">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2610" y="281" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576526136980" />
-    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576526099277">
+    <state x="2536" y="243" key="run.anything.popup" timestamp="1576532333961">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576526099277" />
+    <state x="2536" y="243" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576532333961" />
+    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1576532408967">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1576532408967" />
   </component>
 </project>

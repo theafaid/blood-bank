@@ -1,7 +1,7 @@
 <?php
 
-if(! function_exists('settings')) {
-    function settings($key = null) {
+if(! function_exists('site')) {
+    function site($key = null) {
         $settings = app('settings');
 
         if($key) {

@@ -29,4 +29,23 @@ class GovernorateRepository implements GovernorateRepositoryInterface
     {
         return $this->governorates->all();
     }
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public function store($data)
+    {
+        return $this->governorates->create($data);
+    }
+
+    /**
+     * @param $governorate
+     * @param $data
+     * @return mixed
+     */
+    public function update($governorate, $data)
+    {
+        return $governorate->update($data);
+    }
 }

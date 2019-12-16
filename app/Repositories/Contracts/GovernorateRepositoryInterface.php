@@ -4,8 +4,7 @@ namespace App\Repositories\Contracts;
 
 interface GovernorateRepositoryInterface
 {
-    /**
-     * @return mixed
-     */
     public function all();
+    public function store($data);
+    public function update($governorate, $data);
 }

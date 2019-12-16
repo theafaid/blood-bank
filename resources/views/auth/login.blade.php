@@ -1,3 +1,5 @@
+@section('title') تسجيل الدخول @endsection
+
 @component('auth.components.auth')
     @slot('form')
         <form class="card" action="{{route('login')}}" method="post">

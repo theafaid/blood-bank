@@ -15,7 +15,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <!-- Generated: 2018-04-16 09:29:05 +0200 -->
-    <title>Login - tabler.github.io - a responsive, flat and full featured admin template</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <<link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
 
