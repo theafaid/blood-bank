@@ -22,8 +22,17 @@ class DonationRequest extends Model
     }
 
     /**
+     * @return mixed
+     */
+    public function governorate()
+    {
+        return $this->city->governorate;
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+
     public function bloodType()
     {
         return $this->belongsTo(BloodType::class);
@@ -35,5 +44,13 @@ class DonationRequest extends Model
     public function city()
     {
         return $this->belongsTo(City::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function owner()
+    {
+        return $this->belongsTo(Client::class, 'client_id', 'id');
     }
 }

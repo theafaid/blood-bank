@@ -31,6 +31,7 @@ Vue.prototype.url = function(url = null) {
 }
 
 Vue.component('governorates', require('./components/Governorates.vue').default);
+Vue.component('cities', require('./components/Cities.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

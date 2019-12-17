@@ -22,6 +22,16 @@ class ClientRepository implements ClientRepositoryInterface
     }
 
     /**
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     */
+    public function __call($name, ...$arguments)
+    {
+        return $this->$name(...$arguments);
+    }
+
+    /**
      * @param $data
      * @return mixed
      */

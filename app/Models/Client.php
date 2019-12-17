@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\ClientToken;
 use App\Traits\HasPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -96,5 +97,13 @@ class Client extends Authenticatable implements JWTSubject
     public function allowedGovernoratesForNotification()
     {
         return $this->morphedByMany(Governorate::class, 'clientable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tokens()
+    {
+        return $this->hasMany(ClientToken::class);
     }
 }

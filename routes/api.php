@@ -71,6 +71,8 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function () {
     Route::patch('/profile', 'UserProfileController@update');
     Route::get('/allowed-notifications', 'UserNotificationsSettingController@index');
     Route::patch('/allowed-notifications', 'UserNotificationsSettingController@update');
+    Route::get('/notifications', 'UserNotificationsController@index');
+    Route::post('/tokens', 'UserTokensController@store');
 });
 
 

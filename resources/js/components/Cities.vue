@@ -1,8 +1,8 @@
 <template>
     <div>
         <!-- Button trigger modal -->
-        <button v-if="governorates.length" @click.prevent="prepareCreate" type="button" class="btn btn-primary btn-sm">
-            إنشاء محافظة
+        <button v-if="localCities.length" @click.prevent="prepareCreate" type="button" class="btn btn-primary btn-sm">
+            إنشاء مدينة
         </button>
 
         <!-- Modal -->
@@ -16,10 +16,22 @@
                     <form @submit.prevent="submit" @keydown="form.onKeydown($event)">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>إسم المحافظة</label>
+                                <label>إسم المدينة</label>
                                 <input v-model="form.name" type="text" name="name"
                                        class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
                                 <has-error :form="form" field="name"></has-error>
+                            </div>
+                            <div class="form-group">
+                                <label>المحافظة</label>
+                                <select name="governorate_id" v-model="form.governorate_id" class="form-control">
+                                    <option
+                                        v-for="governorate in governorates"
+                                        v-text="governorate.name"
+                                        :value="governorate.id"
+                                        :selected="selectedCity && selectedCity.governorate.id == governorate.id">
+                                    </option>
+                                </select>
+                                <has-error :form="form" field="governorate_id"></has-error>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -35,16 +47,18 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">اسم المحافظة</th>
+                <th scope="col">اسم المدينة</th>
+                <th scope="col">المحاظة</th>
                 <th scope="col">إعدادات</th>
             </tr>
             </thead>
             <tbody>
-            <tr v-for="(governorate, index) in governorates" :key="governorate.id">
+            <tr v-for="(city, index) in localCities" :key="city.id">
                 <td v-text="index+1"></td>
-                <td v-text="governorate.name"></td>
+                <td v-text="city.name"></td>
+                <td v-text="city.governorate.name"></td>
                 <td>
-                    <a href="#" class="btn btn-info btn-sm" @click.prevent="prepareEdit(governorate)">
+                    <a href="#" class="btn btn-info btn-sm" @click.prevent="prepareEdit(city)">
                         <i class="fe fe-edit"></i>
                     </a>
                 </td>
@@ -52,9 +66,9 @@
             </tbody>
         </table>
         <div v-else class="alert alert-danger">
-            لايوجد اى محافظات حتى الان.
-            <button v-if="governorates.length" @click.prevent="prepareCreate" type="button" class="btn btn-primary btn-sm">
-                إنشاء محافظة
+            لايوجد اى مدن حتى الان.
+            <button @click.prevent="prepareCreate" type="button" class="btn btn-primary btn-sm">
+                إنشاء مدينة
             </button>
         </div>
     </div>
@@ -62,33 +76,35 @@
 
 <script>
     export default {
-        props: ['data'],
+        props: ['cities', 'governorates'],
 
         data () {
             return {
-                governorates : this.data,
+                localCities : this.cities,
                 form: new Form({
                     name: null,
+                    governorate_id: null,
                 }),
+                formType: 'create',
                 modalTitle: null,
                 modalSubmit: null,
-                selectedGovernorate: null,
+                selectedCity: null,
             }
         },
 
         methods: {
-            prepareEdit(governorate) {
-                this.selectedGovernorate = governorate;
+            prepareEdit(city) {
+                this.selectedCity = city;
                 this.formType = 'edit';
-                this.modalTitle = 'تعديل ' + governorate.name;
-                this.form.name = governorate.name;
+                this.modalTitle = 'تعديل ' + city.name;
+                this.form.name = city.name;
                 this.modalSubmit = 'تعديل';
                 $("#modal").modal('toggle');
             },
 
             prepareCreate() {
                 this.formType = 'create';
-                this.modalTitle = 'إنشاء محافظة جديدة';
+                this.modalTitle = 'إنشاء مدينة جديدة';
                 this.form.name = null;
                 this.modalSubmit = 'تم';
                 $("#modal").modal('toggle');
@@ -103,18 +119,18 @@
             },
 
             create() {
-                this.form.post(this.url('governorates'))
+                this.form.post(this.url('cities'))
                 .then(({data}) => {
-                    this.governorates.unshift(data);
+                    this.localCities.unshift(data);
                     this.form.reset();
                     $("#modal").modal('toggle');
                 });
             },
 
-            update(governorate) {
-                this.form.patch(this.url('governorates/' + governorate.id))
+            update(city) {
+                this.form.patch(this.url('cities/' + city.id))
                 .then(({data}) => {
-                    this.governorates.splice(this.findByIndex(governorate), 1, data)
+                    this.cities.splice(this.findByIndex(city), 1, data);
                     $("#modal").modal('toggle');
                 });
             },
@@ -126,8 +142,8 @@
             //     });
             // },
 
-            findByIndex(governorate) {
-                return this.governorates.indexOf(governorate);
+            findByIndex(city) {
+                return this.cities.indexOf(governorate);
             }
         }
     }

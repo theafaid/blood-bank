@@ -1829,6 +1829,167 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cities.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Cities.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['cities', 'governorates'],
+  data: function data() {
+    return {
+      localCities: this.cities,
+      form: new Form({
+        name: null,
+        governorate_id: null
+      }),
+      formType: 'create',
+      modalTitle: null,
+      modalSubmit: null,
+      selectedCity: null
+    };
+  },
+  methods: {
+    prepareEdit: function prepareEdit(city) {
+      this.selectedCity = city;
+      this.formType = 'edit';
+      this.modalTitle = 'تعديل ' + city.name;
+      this.form.name = city.name;
+      this.modalSubmit = 'تعديل';
+      $("#modal").modal('toggle');
+    },
+    prepareCreate: function prepareCreate() {
+      this.formType = 'create';
+      this.modalTitle = 'إنشاء مدينة جديدة';
+      this.form.name = null;
+      this.modalSubmit = 'تم';
+      $("#modal").modal('toggle');
+    },
+    submit: function submit() {
+      if (this.formType == 'create') {
+        this.create();
+      } else {
+        this.update(this.selectedGovernorate);
+      }
+    },
+    create: function create() {
+      var _this = this;
+
+      this.form.post(this.url('cities')).then(function (_ref) {
+        var data = _ref.data;
+
+        _this.localCities.unshift(data);
+
+        _this.form.reset();
+
+        $("#modal").modal('toggle');
+      });
+    },
+    update: function update(city) {
+      var _this2 = this;
+
+      this.form.patch(this.url('cities/' + city.id)).then(function (_ref2) {
+        var data = _ref2.data;
+
+        _this2.cities.splice(_this2.findByIndex(city), 1, data);
+
+        $("#modal").modal('toggle');
+      });
+    },
+    // destroy(governorate) {
+    //     axios.delete(this.url('governorates/' + governorate.id))
+    //     .then(response => {
+    //         this.governorates.splice(this.findByIndex(governorate), 1)
+    //     });
+    // },
+    findByIndex: function findByIndex(city) {
+      return this.cities.indexOf(governorate);
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Governorates.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Governorates.vue?vue&type=script&lang=js& ***!
@@ -1838,9 +1999,6 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
 //
 //
 //
@@ -1932,7 +2090,6 @@ __webpack_require__.r(__webpack_exports__);
       this.modalSubmit = 'تم';
       $("#modal").modal('toggle');
     },
-    prepareDelete: function prepareDelete() {},
     submit: function submit() {
       if (this.formType == 'create') {
         this.create();
@@ -1964,13 +2121,12 @@ __webpack_require__.r(__webpack_exports__);
         $("#modal").modal('toggle');
       });
     },
-    destroy: function destroy(governorate) {
-      var _this3 = this;
-
-      axios["delete"](this.url('governorates/' + governorate.id)).then(function (response) {
-        _this3.governorates.splice(_this3.findByIndex(governorate), 1);
-      });
-    },
+    // destroy(governorate) {
+    //     axios.delete(this.url('governorates/' + governorate.id))
+    //     .then(response => {
+    //         this.governorates.splice(this.findByIndex(governorate), 1)
+    //     });
+    // },
     findByIndex: function findByIndex(governorate) {
       return this.governorates.indexOf(governorate);
     }
@@ -3491,6 +3647,302 @@ AlertSuccess_component.options.__file = "AlertSuccess.vue"
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.localCities.length
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-sm",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.prepareCreate($event)
+              }
+            }
+          },
+          [_vm._v("\n        إنشاء مدينة\n    ")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "modal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "modalTitle",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-header" }, [
+                _c("h5", {
+                  staticClass: "modal-title",
+                  attrs: { id: "exampleModalLongTitle" },
+                  domProps: { textContent: _vm._s(_vm.modalTitle) }
+                }),
+                _vm._v(" "),
+                _c("button", {
+                  staticClass: "close",
+                  attrs: {
+                    id: "closeModal",
+                    type: "button",
+                    "data-dismiss": "modal",
+                    "aria-label": "Close"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.submit($event)
+                    },
+                    keydown: function($event) {
+                      return _vm.form.onKeydown($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "modal-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("إسم المدينة")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.form.name,
+                              expression: "form.name"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: { "is-invalid": _vm.form.errors.has("name") },
+                          attrs: { type: "text", name: "name" },
+                          domProps: { value: _vm.form.name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.form, "name", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "name" }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "form-group" },
+                      [
+                        _c("label", [_vm._v("المحافظة")]),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.form.governorate_id,
+                                expression: "form.governorate_id"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { name: "governorate_id" },
+                            on: {
+                              change: function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.form,
+                                  "governorate_id",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              }
+                            }
+                          },
+                          _vm._l(_vm.governorates, function(governorate) {
+                            return _c("option", {
+                              domProps: {
+                                value: governorate.id,
+                                selected:
+                                  _vm.selectedCity &&
+                                  _vm.selectedCity.governorate.id ==
+                                    governorate.id,
+                                textContent: _vm._s(governorate.name)
+                              }
+                            })
+                          }),
+                          0
+                        ),
+                        _vm._v(" "),
+                        _c("has-error", {
+                          attrs: { form: _vm.form, field: "governorate_id" }
+                        })
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "modal-footer" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-secondary",
+                        attrs: { type: "button", "data-dismiss": "modal" }
+                      },
+                      [_vm._v("إلغاء")]
+                    ),
+                    _vm._v(" "),
+                    _c("button", {
+                      staticClass: "btn btn-primary",
+                      attrs: { disabled: _vm.form.busy, type: "submit" },
+                      domProps: { textContent: _vm._s(_vm.modalSubmit) }
+                    })
+                  ])
+                ]
+              )
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm.governorates.length
+      ? _c(
+          "table",
+          {
+            staticClass:
+              "table table-hover table-bordered table-center table-active"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.localCities, function(city, index) {
+                return _c("tr", { key: city.id }, [
+                  _c("td", { domProps: { textContent: _vm._s(index + 1) } }),
+                  _vm._v(" "),
+                  _c("td", { domProps: { textContent: _vm._s(city.name) } }),
+                  _vm._v(" "),
+                  _c("td", {
+                    domProps: { textContent: _vm._s(city.governorate.name) }
+                  }),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-info btn-sm",
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.prepareEdit(city)
+                          }
+                        }
+                      },
+                      [_c("i", { staticClass: "fe fe-edit" })]
+                    )
+                  ])
+                ])
+              }),
+              0
+            )
+          ]
+        )
+      : _c("div", { staticClass: "alert alert-danger" }, [
+          _vm._v("\n        لايوجد اى مدن حتى الان.\n        "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary btn-sm",
+              attrs: { type: "button" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.prepareCreate($event)
+                }
+              }
+            },
+            [_vm._v("\n            إنشاء مدينة\n        ")]
+          )
+        ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("اسم المدينة")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("المحاظة")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("إعدادات")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Governorates.vue?vue&type=template&id=8c8fce7c&":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Governorates.vue?vue&type=template&id=8c8fce7c& ***!
@@ -3673,21 +4125,6 @@ var render = function() {
                         }
                       },
                       [_c("i", { staticClass: "fe fe-edit" })]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-danger btn-sm",
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            return _vm.destroy(governorate)
-                          }
-                        }
-                      },
-                      [_c("i", { staticClass: "fe fe-trash" })]
                     )
                   ])
                 ])
@@ -15902,6 +16339,7 @@ Vue.prototype.url = function () {
 };
 
 Vue.component('governorates', __webpack_require__(/*! ./components/Governorates.vue */ "./resources/js/components/Governorates.vue")["default"]);
+Vue.component('cities', __webpack_require__(/*! ./components/Cities.vue */ "./resources/js/components/Cities.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -15956,6 +16394,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Cities.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Cities.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cities.vue?vue&type=template&id=3a449cf4& */ "./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4&");
+/* harmony import */ var _Cities_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cities.vue?vue&type=script&lang=js& */ "./resources/js/components/Cities.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Cities_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Cities.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Cities.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Cities.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cities_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Cities.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cities.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cities_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Cities.vue?vue&type=template&id=3a449cf4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cities.vue?vue&type=template&id=3a449cf4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cities_vue_vue_type_template_id_3a449cf4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

@@ -19,13 +19,13 @@ class CreateNotificationsTable extends Migration
             $table->morphs('notifiable');
             $table->text('data');
             $table->timestamp('read_at')->nullable();
-            $table->unsignedMediumInteger('donation_request_id');
+//            $table->unsignedMediumInteger('donation_request_id');
             $table->timestamps();
 
-            $table->foreign('donation_request_id')
-                ->references('id')
-                ->on('donation_requests')
-                ->onDelete('cascade');
+//            $table->foreign('donation_request_id')
+//                ->references('id')
+//                ->on('donation_requests')
+//                ->onDelete('cascade');
         });
     }
 

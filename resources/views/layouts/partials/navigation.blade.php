@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-flex">
             <a class="header-brand" href="./index.html">
-                <img src="./demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
+                {{config('app.name')}}
             </a>
             <div class="d-flex order-lg-2 ml-auto">
                 <div class="nav-item d-none d-md-flex">
@@ -43,7 +43,7 @@
                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                         <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
                         <span class="ml-2 d-none d-lg-block">
-                      <span class="text-default">Jane Pearson</span>
+                      <span class="text-default">{{auth()->user()->name}}</span>
                       <small class="text-muted d-block mt-1">Administrator</small>
                     </span>
                     </a>

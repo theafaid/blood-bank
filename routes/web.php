@@ -4,6 +4,7 @@ Auth::routes(['register' => false]);
 
 Route::group(['middleware' => 'auth:web'], function () {
     Route::resource('/governorates', 'Governorates\GovernorateController');
+    Route::resource('/cities', 'Cities\CityController');
 });
 
 //Route::get('test', function() {
